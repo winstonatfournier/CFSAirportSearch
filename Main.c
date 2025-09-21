@@ -650,7 +650,6 @@ void scancode_handler(char scancode){
         case 0x22: loader = &char_X; bar_char = 'X'; break;
         case 0x35: loader = &char_Y; bar_char = 'Y'; break;
         case 0x1A: loader = &char_Z; bar_char = 'Z'; break;
-        //case 0x29: loader = &char_SPACE; bar_char = ' '; break;
         case 0x5A: loader = &char_ENTER; bar_char = '\0'; break;
         case 0xF0: loader = &char_BREAK; bar_char = '\0'; break;
         case 0xE0: loader = &char_SHIFT; bar_char = '\0'; break;
@@ -716,21 +715,6 @@ void search(){
     } else{
         return;
     }
-
-    /*Runway Box*/
-    //horizontal lines
-    //draw_line(19, 25, 300, 25, 0xFFFF);
-    //draw_line(19, 114, 300, 114, 0xFFFF);
-    //vertical lines
-    //draw_line(300, 25, 300, 114, 0xFFFF);
-    //draw_line(19, 25, 19, 114, 0xFFFF);
-    
-    /*Text Info Box*/
-    //horizontal line
-    //draw_line(19, 220,300, 220,0xFFFF);
-    //vertical lines
-    //draw_line(19, 114, 19, 220, 0xFFFF);
-    //draw_line(300, 114, 300, 220, 0xFFFF);
 
     if (loader == &char_ENTER){sound1();}
     else if (loader == &char_SHIFT){sound2();}
@@ -859,18 +843,8 @@ void sound3(){
 
 void entry_CYQM(){ //Moncton
     wipe_screen();
-    //draw_line(100, 100, 200, 30, 0xF800);
-    //draw_line(97, 97, 210, 94, 0x07E0);
-    //draw_line(100, 100, 200, 30, 0xFFFF);
-    //draw_line(101, 100, 201, 30, 0xFFFF);
-    //draw_line(102, 100, 202, 30, 0xFFFF);
     draw_thick_line(103, 130, 203, 60, 0xFFFF);
-    //draw_line(104, 100, 204, 30, 0xFFFF);
-    //draw_line(105, 100, 205, 30, 0xFFFF);
-    //draw_line(106, 100, 206, 30, 0xFFFF);
-    //draw_line(97, 97, 210, 94, 0xFFFF);
     draw_thick_line(97, 126, 210, 123, 0xFFFF);
-    //draw_line(97, 95, 210, 92, 0xFFFF);
     write_character(21, 31, '1');
     write_character(22, 31, '1');
     write_character(25, 34, '0');
@@ -1004,20 +978,7 @@ void entry_CYTZ(){ //Billy Bishop
 
 void entry_CYYZ(){ //Toronto Pearson
     wipe_screen();
-    /*
-    draw_line(20, 91, 121, 19, 0xFFFF);
-    draw_line(88, 21, 241, 122, 0xFFFF);
-    draw_line(52, 48, 171, 134, 0xFFFF);
-    draw_line(299, 80, 233, 170, 0xFFFF);
-    draw_line(308, 93, 240, 188, 0xFFFF);
-    */
-    /*
-    draw_thick_line(20, 91, 121, 19, 0xFFFF);
-    draw_thick_line(88, 21, 241, 122, 0xFFFF);
-    draw_thick_line(52, 48, 171, 134, 0xFFFF);
-    draw_thick_line(299, 80, 233, 170, 0xFFFF);
-    draw_thick_line(308, 93, 240, 188, 0xFFFF);
-    */
+ 
     draw_thick_line(20, 111, 121, 39, 0xFFFF);
     draw_thick_line(88, 41, 241, 142, 0xFFFF);
     draw_thick_line(52, 68, 171, 154, 0xFFFF);
@@ -1108,37 +1069,7 @@ void entry_CYYZ(){ //Toronto Pearson
         "          Refer to CAP parking areas (Terminal 1 and Terminal 1 East Hold)",
         "          for details.",
     };
-
-    /*DATA THAT COULD NOT FIT*/
-    /*  "COMM",
-        "RCO       London rdo 123.275 (FISE)",
-        "ATIS      120.825 133.1",
-        "CLNC DEL  121.3 all dep acft ctc clnc del dur 12-04Z",
-        "APRON ADV North apron 122.275 (122.825)",
-        "          South apron 122.075 (122.825)",
-        "          Apron Coordinator 122.875 (122.825)",
-        "          Apron Tow Coordinator 136.525",
-        "          FedEx, Infield Concourse, Cargo West 122.275 (North apron),",
-        "          Skyservice/Avitat, 3 Bay Hgr Aprons 122.075 (South apron).",
-        "GND       119.1 121.65 121.9",
-        "TWR       Toronto 118.35 118.7 (E) (emerg only 905-676-3588)",
-        "ARR       124.475 125.4 132.8",
-        "DEP       127.575 128.8",
-        "VFR ADV   119.3 133.4",
-        "NAV",
-        "NDB       QUEENSWAY ZYZ 368 (M) N43 37 10 W79 32 52",
-        "          WOODHILL ZTO 403 (L) N43 44 20 W79 42 12",
-        "          MEADOWVALE ZLP 341 (L) N43 37 40 W79 43 52",
-        "VOR/DME   YYZ 112.15 Ch 58(Y) N43 39 29 W79 37 53 (561')",
-        "          PEARSON YTP 116.55 Ch 112(Y) N43 40 18 W79 39 50 (595')",
-        "          DME IDP 111.95 Ch 56(Y) N43 39 41 W79 37 12 (552')",
-        "ILS       ICV 111.95 (Rwy 06R) RVR LOC reliable only within 10 either side of centreline;",
-        "          IDP 111.95 (Rwy 24L) RVR LOC reliable only within 10 either side of centreline;",
-        "          IJS 109.1 (Rwy 06L) RVR LOC reliable only within 10 either side of centreline;",
-        "          ILP 110.95 (Rwy 15R) RVR LOC reliable only within 10 either side of centreline;",
-        "          INV 109.3 (Rwy 24R) RVR LOC reliable only within 10 either side of centreline;"
-    */
-
+  
     int entries_num = sizeof(entries) / sizeof(entries[0]);
     plot_entries(entries, entries_num);
     arrow_left_disp();
@@ -1146,28 +1077,15 @@ void entry_CYYZ(){ //Toronto Pearson
 
 void entry_CYUL(){ //Montreal/Pierre Elliot Trudeau
     wipe_screen();
-    /*
-    draw_line(20, 91, 121, 19, 0xFFFF);
-    draw_line(88, 21, 241, 122, 0xFFFF);
-    draw_line(52, 48, 171, 134, 0xFFFF);
-    draw_line(299, 80, 233, 170, 0xFFFF);
-    draw_line(308, 93, 240, 188, 0xFFFF);
-    */
+
     draw_line(30, 118, 180, 33, 0xFFFF);
     draw_line(30, 115, 180, 30, 0xFFFF);
     draw_line(30, 112, 180, 27, 0xFFFF);
-    ///draw_thick_line(29, 115, 181, 30, 0xFFFF);
-    ///draw_thick_line(30, 118, 180, 33, 0xFFFF);
     draw_thick_line(25, 105, 150, 105, 0xFFFF);
-    ///draw_thick_line(25, 104, 150, 104, 0xFFFF);
     draw_line(150, 150, 300, 65, 0xFFFF);
     draw_line(150, 148, 300, 63, 0xFFFF);
     draw_line(150, 146, 300, 61, 0xFFFF);
-    ///draw_thick_line(150, 149, 300, 64, 0xFFFF);
-    //draw_thick_line(88, 21, 241, 122, 0xFFFF);
-    //draw_thick_line(52, 48, 171, 134, 0xFFFF);
-    //draw_thick_line(299, 80, 233, 170, 0xFFFF);
-    //draw_thick_line(308, 93, 240, 188, 0xFFFF);
+ 
     draw_line(160, 90, 180, 80, 0xFFFF);
     draw_line(156, 83, 176, 73, 0xFFFF);
     draw_line(160, 90, 156, 83, 0xFFFF);
@@ -1188,8 +1106,6 @@ void entry_CYUL(){ //Montreal/Pierre Elliot Trudeau
     draw_line(228, 43, 236, 56, 0xFFFF);
     draw_line(228, 43, 213, 51, 0xFFFF);
     draw_line(221, 64, 236, 56, 0xFFFF);
-
-    //draw_thick_line(165, 63, 185, 53, 0xFFFF);
 
     write_character(6, 30, '0');
     write_character(7, 30, '6');
@@ -1212,13 +1128,7 @@ void entry_CYUL(){ //Montreal/Pierre Elliot Trudeau
     write_character(74, 14, '2');
     write_character(75, 14, '4');
     write_character(76, 14, 'L');
-    /*
-    write_character(24, 13, '1');
-    write_character(25, 13, '1');
-    write_character(26, 13, '0');
-    write_character(27, 13, '0');
-    write_character(28, 13, '0');
-    */
+
     arrow_right_disp();
  }
 
@@ -1558,3 +1468,4 @@ void plot_entries(char **entries, int entries_num){
         plot_string(_x, _y+i, entries[i]);
     }
  }
+
