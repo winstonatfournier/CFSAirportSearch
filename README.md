@@ -28,13 +28,21 @@ The following block diagram illustrates the internal flow of the Airport Search 
 2. Connect VGA monitor, PS/2 keyboard, and audio output.
 3. Power on the board and enter one of the following ICAO codes to begin.
 
-##Demo
+## Demo
 
 - Normal Operation
-https://github.com/user-attachments/assets/62ce80cb-5174-495c-af59-8ae774cf8f86
+
+
+https://github.com/user-attachments/assets/166a79c2-d393-4335-9085-2fcc984ebfee
+
+
 
 - Incorrect Input (Visual and Audio Indication)
-https://github.com/user-attachments/assets/42bec400-e211-4234-a95f-b9bca32c69f5
 
-License
+
+https://github.com/user-attachments/assets/a61caaa4-42cf-4f96-a962-0498224d0f6f
+
+
+
+## License
 MIT License
