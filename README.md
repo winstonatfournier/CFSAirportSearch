@@ -1,7 +1,7 @@
 # ✈️ Airport Search for Pilots: FPGA-Based Aerodrome Info System
 
 ## Overview
-This project implements a real-time airport search tool on the DE1-SoC FPGA platform. It allows pilots to retrieve structured aerodrome data from the Canada Flight Supplement using ICAO codes entered via a PS/2 keyboard. The system displays runway maps and airport services on a VGA monitor and provides audio feedback for user interactions.
+This project implements a real-time airport search tool on the DE1-SoC FPGA platform. It allows pilots to retrieve structured aerodrome data from the Canada Flight Supplement using ICAO codes entered via a PS/2 keyboard. The system displays runway maps and airport services on a VGA monitor and provides audio feedback for user interactions. This project was independantly developed by Jay Dadhiala and Winston Fornier as part of the University of Toronto ECE243 course.
 
 ## Features
 - **ICAO Code Input:** Users enter 4-letter ICAO codes via PS/2 keyboard to search for Canadian airports.
