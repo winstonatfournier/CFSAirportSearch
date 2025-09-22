@@ -45,6 +45,6 @@ https://github.com/user-attachments/assets/166a79c2-d393-4335-9085-2fcc984ebfee
 https://github.com/user-attachments/assets/a61caaa4-42cf-4f96-a962-0498224d0f6f
 
 
+## Academic Context
 
-## License
-MIT License
+This project was developed as part of the **ECE243: Computer Organization** course at the University of Toronto. It reflects independent design and implementation work facilitated by course instruction. All logic was built from scratch using C and tested on physical and simulated hardware.
